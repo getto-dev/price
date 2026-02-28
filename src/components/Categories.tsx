@@ -9,29 +9,16 @@ interface CategoriesProps {
   onCategorySelect: (id: string | null) => void;
 }
 
-const CATEGORY_ICONS: Record<string, string> = {
-  heating: '🔥',
-  floor_heat: '🏠',
-  water: '💧',
-  boilers: '⚙️',
-  chimneys: '🏭',
-  sewerage: '🔧',
-  pipes: '🔩',
-  filtration: '💦',
-  automation: '🤖',
-  grooving: '🔨',
-  service: '🛠️',
-  plumbing: '🚿',
-};
+const basePath = process.env.NODE_ENV === 'production' ? '/price' : '';
 
 const CategoryButton = memo(function CategoryButton({
   name,
-  icon,
+  iconSrc,
   isActive,
   onClick,
 }: {
   name: string;
-  icon: string;
+  iconSrc: string;
   isActive: boolean;
   onClick: () => void;
 }) {
@@ -46,10 +33,16 @@ const CategoryButton = memo(function CategoryButton({
       )}
       aria-pressed={isActive}
     >
-      <span className="text-2xl sm:text-3xl" role="img" aria-hidden="true">
-        {icon}
-      </span>
-      <span className="text-[10px] sm:text-[11px] font-bold text-center leading-tight line-clamp-2">
+      <img
+        src={iconSrc}
+        alt=""
+        className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+        aria-hidden="true"
+      />
+      <span className={cn(
+        "text-[10px] sm:text-[11px] font-bold text-center leading-tight line-clamp-2",
+        isActive && "text-white"
+      )}>
         {name}
       </span>
     </button>
@@ -71,7 +64,7 @@ export function Categories({ selectedCategory, onCategorySelect }: CategoriesPro
           <CategoryButton
             key={cat.id}
             name={cat.name}
-            icon={CATEGORY_ICONS[cat.id] || '📦'}
+            iconSrc={`${basePath}/icons/svg/${cat.id}.svg`}
             isActive={selectedCategory === cat.id}
             onClick={() => handleCategoryClick(cat.id)}
           />
