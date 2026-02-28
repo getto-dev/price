@@ -7,8 +7,8 @@ const basePath = isProd ? '/price' : '';
 const STATIC_FILES = [
   `${basePath}/`,
   `${basePath}/manifest.json`,
-  `${basePath}/icons/android/android-192.png`,
-  `${basePath}/icons/android/android-512.png`,
+  `${basePath}/icons/android/android-192x192.png`,
+  `${basePath}/icons/android/android-512x512.png`,
 ];
 
 self.addEventListener('install', (event) => {
