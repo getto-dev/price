@@ -7,6 +7,15 @@ const basePath = process.env.NODE_ENV === 'production' ? '/price' : '';
 export const metadata: Metadata = {
   title: 'Прайс-лист на монтаж',
   description: 'Удобный справочник цен на монтажные работы',
+  icons: {
+    icon: [
+      { url: `${basePath}/icons/favicon-32x32.png`, sizes: '32x32', type: 'image/png' },
+      { url: `${basePath}/icons/favicon-16x16.png`, sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: `${basePath}/icons/apple-touch-icon.png`, sizes: '180x180', type: 'image/png' },
+    ],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -37,8 +46,15 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Прайс-лист" />
+        <meta name="msapplication-TileColor" content="#667eea" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        <link rel="icon" type="image/png" sizes="32x32" href={`${basePath}/icons/favicon-32x32.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${basePath}/icons/favicon-16x16.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}/icons/apple-touch-icon.png`} />
         <link rel="manifest" href={`${basePath}/manifest.json`} />
-        <link rel="apple-touch-icon" href={`${basePath}/icons/ios/180.png`} />
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `

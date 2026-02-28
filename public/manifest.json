@@ -1,5 +1,5 @@
 {
-  "name": "Прайс-лист на монтаж",
+  "name": "Прайс-лист",
   "short_name": "Прайс-лист",
   "description": "Удобный справочник цен на монтажные работы",
   "start_url": "/price/",
@@ -22,6 +22,34 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/price/icons/ios/180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/price/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/price/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/price/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+  ],
+  "screenshots": [
+    {
+      "src": "/price/screenshots/screenshot-1.png",
+      "sizes": "1280x720",
+      "form": "rect",
+      "purpose": "viewport-screenshot"
     }
   ],
   "shortcuts": [
@@ -29,7 +57,14 @@
       "name": "Поиск услуг",
       "short_name": "Поиск",
       "description": "Найти услугу в прайс-листе",
-      "url": "/price/"
+      "url": "/price/?tab=search",
+      "icons": [
+        {
+          "src": "/price/icons/android/android-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
