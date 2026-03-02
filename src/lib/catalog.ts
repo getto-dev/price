@@ -13,7 +13,7 @@ export interface Category {
 }
 
 export const VERSION = '2026.1';
-export const UPDATED = '2025-03-03';
+export const UPDATED = '2025-03-02';
 
 export const CATEGORIES: Category[] = [
   {
@@ -1591,7 +1591,7 @@ export const CATALOG: Record<string, Service[]> = {
           "n": "Замена датчиков",
           "d": "в зависимости от модели котла",
           "u": "шт",
-          "p": 700
+          "p": 720
       },
       {
           "id": "serv_004",
