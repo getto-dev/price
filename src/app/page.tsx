@@ -5,7 +5,7 @@ import { Header } from '@/components/Header';
 import { Categories } from '@/components/Categories';
 import { Services } from '@/components/Services';
 
-const CURRENT_VERSION = '1.0.0';
+const CURRENT_VERSION = '2.0';
 
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
