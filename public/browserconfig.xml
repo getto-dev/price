@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
     <msapplication>
-        <TileColor>#667eea</TileColor>
+        <tile>
+            <square70x70logo src="/price/icons/android/android-72x72.png"/>
+            <square150x150logo src="/price/icons/android/android-152x152.png"/>
+            <square310x310logo src="/price/icons/android/android-192x192.png"/>
+            <TileColor>#667eea</TileColor>
+        </tile>
     </msapplication>
 </browserconfig>
