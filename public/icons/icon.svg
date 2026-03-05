@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#667eea"/>
+  <g fill="white">
+    <!-- Прайс-лист/список -->
+    <rect x="128" y="96" width="256" height="320" rx="24" fill="white"/>
+    <rect x="152" y="136" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="180" width="208" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="204" width="180" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="244" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="288" width="208" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="312" width="180" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="352" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="396" width="208" height="8" rx="4" fill="#e2e8f0"/>
+  </g>
+</svg>
