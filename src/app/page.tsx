@@ -5,6 +5,8 @@ import { Header } from '@/components/Header';
 import { Categories } from '@/components/Categories';
 import { Services } from '@/components/Services';
 
+const CURRENT_VERSION = '1.0.0';
+
 export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -43,8 +45,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <main className="max-w-5xl mx-auto px-3 sm:px-4 py-3 sm:py-4 safe-bottom">
+    <div className="min-h-screen bg-background flex flex-col">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-3 sm:px-4 py-3 sm:py-4 safe-bottom">
         <Header
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}
@@ -59,6 +61,9 @@ export default function HomePage() {
           searchQuery={searchQuery}
         />
       </main>
+      <footer className="text-center py-4 text-[10px] sm:text-[11px] text-muted-foreground/60">
+        Getto-Dev v{CURRENT_VERSION} • 2026
+      </footer>
     </div>
   );
 }

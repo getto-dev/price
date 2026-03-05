@@ -163,9 +163,9 @@ export function Services({ selectedCategory, searchQuery }: ServicesProps) {
     );
   }
 
-  // Категория не выбрана
+  // Категория не выбрана - не показываем ничего
   if (!selectedCategory) {
-    return <EmptyState message="Выберите категорию выше" />;
+    return null;
   }
 
   // Показываем услуги категории
