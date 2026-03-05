@@ -57,7 +57,6 @@ export function Categories({ selectedCategory, onCategorySelect }: CategoriesPro
   return (
     <section className="mb-5">
       <div className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-2.5 px-1">
-        Выберите категорию
       </div>
       <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 gap-1.5 sm:gap-2" role="listbox">
         {CATEGORIES.map((cat) => (
