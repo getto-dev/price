@@ -24,7 +24,7 @@ export default function HomePage() {
 
       setTimeout(() => {
         if (!reg.installing && !reg.waiting) {
-          alert('Установлена последняя версия');
+          alert('Обновлений нет');
         }
       }, 1500);
     } catch {
