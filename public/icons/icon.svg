@@ -1,36 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4facfe"/>
-      <stop offset="100%" style="stop-color:#00f2fe"/>
-    </linearGradient>
-  </defs>
-  
-  <!-- Градиентный синий фон -->
-  <rect width="512" height="512" rx="96" fill="url(#bgGradient)"/>
-  
-  <!-- Белый лист бумаги -->
-  <path d="M128 80 L128 432 L384 432 L384 160 L304 80 Z" fill="white"/>
-  
-  <!-- Загнутый угол (серый) -->
-  <path d="M304 80 L304 160 L384 160 Z" fill="#e0e0e0"/>
-  <path d="M304 80 L304 160 L384 160" stroke="#bdbdbd" stroke-width="2" fill="none"/>
-  
-  <!-- Контур листа -->
-  <path d="M128 80 L304 80 L384 160 L384 432 L128 432 Z" fill="none" stroke="#e0e0e0" stroke-width="2"/>
-  
-  <!-- Элемент 1: горизонтальная черта -->
-  <line x1="160" y1="200" x2="260" y2="200" stroke="#667eea" stroke-width="8" stroke-linecap="round"/>
-  
-  <!-- Элемент 2: галочка -->
-  <polyline points="160,280 180,300 220,260" fill="none" stroke="#667eea" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  <line x1="240" y1="280" x2="340" y2="280" stroke="#667eea" stroke-width="6" stroke-linecap="round"/>
-  
-  <!-- Элемент 3: пустой квадрат -->
-  <rect x="160" y="340" width="32" height="32" rx="4" fill="none" stroke="#667eea" stroke-width="6"/>
-  <line x1="208" y1="356" x2="340" y2="356" stroke="#667eea" stroke-width="6" stroke-linecap="round"/>
-  
-  <!-- Две горизонтальные линии внизу -->
-  <line x1="160" y1="400" x2="340" y2="400" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
-  <line x1="160" y1="424" x2="300" y2="424" stroke="#e0e0e0" stroke-width="6" stroke-linecap="round"/>
+  <rect width="512" height="512" rx="96" fill="#667eea"/>
+  <g fill="white">
+    <!-- Прайс-лист/список -->
+    <rect x="128" y="96" width="256" height="320" rx="24" fill="white"/>
+    <rect x="152" y="136" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="180" width="208" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="204" width="180" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="244" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="288" width="208" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="312" width="180" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="152" y="352" width="160" height="24" rx="6" fill="#667eea"/>
+    <rect x="152" y="396" width="208" height="8" rx="4" fill="#e2e8f0"/>
+  </g>
 </svg>
