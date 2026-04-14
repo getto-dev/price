@@ -58,7 +58,7 @@ export function Categories({ selectedCategory, onCategorySelect }: CategoriesPro
       <div className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-2.5 px-1">
         Выберите категорию
       </div>
-      <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-2.5">
+      <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-2.5">
         {CATEGORIES.map((cat) => (
           <CategoryButton
             key={cat.id}
