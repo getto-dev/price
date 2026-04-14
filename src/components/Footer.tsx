@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="mt-auto py-4 text-center">
       <p className="text-xs text-muted-foreground font-medium">
         <a
-          href="https://t.me/gettocode"
+          href="tg://resolve?domain=gettocode"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary transition-colors"
