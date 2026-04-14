@@ -107,7 +107,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <main className="max-w-5xl mx-auto px-3 sm:px-4 py-3 sm:py-4 safe-bottom flex-1">
+      <main className="max-w-[1200px] mx-auto px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6 safe-bottom flex-1">
         <Header
           searchQuery={searchQuery}
           onSearchChange={handleSearchChange}

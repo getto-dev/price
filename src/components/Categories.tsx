@@ -24,7 +24,7 @@ const CategoryButton = memo(function CategoryButton({
     <button
       onClick={onClick}
       className={cn(
-        'flex flex-col items-center gap-1.5 p-2 rounded-xl border-2 transition-all touch-manipulation',
+        'flex flex-col items-center gap-2 p-4 sm:p-[18px] rounded-xl border-2 transition-all touch-manipulation',
         isActive
           ? 'gradient-bg border-transparent text-white'
           : 'bg-card border-border hover:border-primary hover:-translate-y-0.5'
@@ -35,11 +35,11 @@ const CategoryButton = memo(function CategoryButton({
       <img
         src={iconSrc}
         alt=""
-        className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+        className="w-7 h-7 sm:w-8 sm:h-8 object-contain"
         aria-hidden="true"
       />
       <span className={cn(
-        "text-[10px] sm:text-[11px] font-bold text-center leading-tight line-clamp-2",
+        "text-[11px] sm:text-xs lg:text-xs font-bold text-center leading-tight line-clamp-2",
         isActive && "text-white"
       )}>
         {name}
@@ -58,7 +58,7 @@ export function Categories({ selectedCategory, onCategorySelect }: CategoriesPro
       <div className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-2.5 px-1">
         Выберите категорию
       </div>
-      <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-6 gap-1.5 sm:gap-2">
+      <div className="grid grid-cols-4 sm:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-2.5">
         {CATEGORIES.map((cat) => (
           <CategoryButton
             key={cat.id}
