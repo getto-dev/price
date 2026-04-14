@@ -35,7 +35,7 @@ const CategoryButton = memo(function CategoryButton({
       <img
         src={iconSrc}
         alt=""
-        className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+        className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
         aria-hidden="true"
       />
       <span className={cn(
