@@ -1,6 +1,17 @@
 import { CATEGORIES } from '@/lib/catalog';
 
 /**
+ * Тип услуги (скопирован из catalog.ts, т.к. не экспортируется)
+ */
+export interface Service {
+  id: string;
+  n: string;
+  d: string;
+  u: string;
+  p: number;
+}
+
+/**
  * Форматирование числа в валюту (рубли)
  * 4500 → "4 500 ₽"
  */
