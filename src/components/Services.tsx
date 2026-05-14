@@ -1,7 +1,8 @@
 'use client';
 
 import { memo, useMemo } from 'react';
-import { CATALOG, CATEGORIES, formatCurrency, declOfNum, getCategoryName, Service } from '@/lib/catalog';
+import { CATALOG, CATEGORIES, Service } from '@/lib/catalog';
+import { formatCurrency, declOfNum, getCategoryName } from '@/lib/catalog-utils';
 
 interface ServicesProps {
   selectedCategory: string | null;
