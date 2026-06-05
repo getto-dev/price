@@ -2,7 +2,8 @@
 
 import { memo, useMemo } from 'react';
 import { CATALOG, CATEGORIES } from '@/lib/catalog';
-import { Service, formatCurrency, declOfNum, getCategoryName } from '@/lib/catalog-utils';
+import { Service, formatCurrency, declOfNum } from '@/lib/catalog-utils';
+import { searchServices, getHighlightParts } from '@/lib/search';
 
 interface ServicesProps {
   selectedCategory: string | null;
@@ -12,24 +13,19 @@ interface ServicesProps {
 
 // Минимальная длина поискового запроса
 const MIN_SEARCH_LENGTH = 2;
-// Максимальное количество результатов поиска
-const MAX_SEARCH_RESULTS = 50;
 
-// Подсветка совпадений в тексте
+// Улучшенная подсветка совпадений с поддержкой синонимов и чисел
 const highlight = (text: string, query: string) => {
   if (!query || query.length < MIN_SEARCH_LENGTH) return text;
 
-  try {
-    const parts = text.split(new RegExp(`(${query})`, 'gi'));
-    return parts.map((part, i) =>
-      part.toLowerCase() === query.toLowerCase() ? (
-        <span key={i} className="bg-primary/20 px-0.5 rounded font-semibold">{part}</span>
-      ) : part
-    );
-  } catch {
-    // Если regex не сработал, возвращаем исходный текст
-    return text;
-  }
+  const parts = getHighlightParts(text, query);
+  return parts.map((part, i) =>
+    part.highlight ? (
+      <span key={i} className="bg-primary/20 px-0.5 rounded font-semibold">{part.text}</span>
+    ) : (
+      <span key={i}>{part.text}</span>
+    )
+  );
 };
 
 // Компонент одной услуги
@@ -94,22 +90,11 @@ export function Services({ selectedCategory, searchQuery, onClearSearch }: Servi
   // Флаг: активен ли поиск
   const isSearchActive = searchQuery.length >= MIN_SEARCH_LENGTH;
 
-  // Поиск по всем услугам
+  // Поиск по всем услугам с использованием модернизированного поисковика
   const searchResults = useMemo(() => {
     if (!isSearchActive) return null;
 
-    const query = searchQuery.toLowerCase();
-    const results: (Service & { catName: string })[] = [];
-
-    for (const [catId, items] of Object.entries(CATALOG)) {
-      for (const item of items) {
-        if (item.n.toLowerCase().includes(query) || item.d.toLowerCase().includes(query)) {
-          results.push({ ...item, catName: getCategoryName(catId) });
-        }
-      }
-    }
-
-    return results.slice(0, MAX_SEARCH_RESULTS);
+    return searchServices(searchQuery);
   }, [searchQuery, isSearchActive]);
 
   // Категория не выбрана и поиск не активен
