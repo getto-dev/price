@@ -1,5 +1,5 @@
 // Версия кеша - обновляется при каждом деплое
-const CACHE_VERSION = 'v2-' + Date.now();
+const CACHE_VERSION = 'v3-' + Date.now();
 const STATIC_CACHE = 'price-static-' + CACHE_VERSION;
 const DYNAMIC_CACHE = 'price-dynamic-' + CACHE_VERSION;
 
